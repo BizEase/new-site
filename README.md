@@ -4,6 +4,11 @@ cd nextjs-dashboard
 pnpm i
 pnpm dev
 
+Baixar clone:
+- git clone https://github.com/BizEase/nextjs-dashboard new-site
+- instalar dependências: pnpm i
+- executar: pnpm dev
+
 git init
 git add .
 git commit -m "XXXXX"
