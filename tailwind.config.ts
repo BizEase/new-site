@@ -8,15 +8,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      gridTemplateColumns: {
-        '13': 'repeat(13, minmax(0, 1fr))',
-      },
       colors: {
         blue: {
           400: '#2589FE',
           500: '#0070F3',
           600: '#2F6FEB',
         },
+        primaryBlue: "#0070F3",   // Azul Claro
+        accentMint: "#1DE9B6",    // Verde Menta
+        lightGray: "#F5F5F5",     // Cinza Claro
+        primaryOrange: "#FFB300", // Laranja
+        textDark: "#333333",      // Cinza Escuro para textos
       },
     },
     keyframes: {
