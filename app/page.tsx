@@ -16,7 +16,7 @@ export default function Page() {
         {/* Navigation Links */}
         <nav className="flex-col md:flex-row md:flex items-center gap-8 text-sm font-semibold tracking-tight transition-all duration-150 ease-in-out">
           <a href="#services" className="hover:text-blue-500 transition-all duration-150 ease-in-out">
-            Serviços
+            Serviçossss
           </a>
           <a href="#about" className="hover:text-blue-500 transition-all duration-150 ease-in-out">
             Quem Somos
