@@ -1,5 +1,5 @@
-import DarkModeToggle from "./DarkModeToggle";
-import AcmeLogo from "@/app/ui/acme-logo";
+import DarkModeToggle from "./components/DarkModeToggle";
+import AcmeLogo from "./components/AcmeLogo";
 import Link from "next/link";
 import { UserIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
@@ -16,7 +16,7 @@ export default function Page() {
         {/* Navigation Links */}
         <nav className="flex-col md:flex-row md:flex items-center gap-8 text-sm font-semibold tracking-tight transition-all duration-150 ease-in-out">
           <a href="#services" className="hover:text-blue-500 transition-all duration-150 ease-in-out">
-            Serviçossss
+            Serviços
           </a>
           <a href="#about" className="hover:text-blue-500 transition-all duration-150 ease-in-out">
             Quem Somos
