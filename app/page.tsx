@@ -1,98 +1,73 @@
-/* export default function Page() {
-  return (
-    <div className="min-h-screen bg-lightGray text-textDark flex flex-col items-center justify-center">
-      <header className="w-full bg-primaryBlue text-white py-6 text-center">
-        <h1 className="text-3xl font-bold">Bem-vindo à BizEase</h1>
-        <p className="mt-2 text-lg">Marketing descomplicado para profissionais liberais</p>
-      </header>
-
-      <main className="flex flex-col items-center mt-10">
-        <section className="max-w-3xl text-center mb-8">
-          <h2 className="text-2xl font-semibold text-primaryBlue mb-4">Transforme Seu Negócio Hoje!</h2>
-          <p className="text-lg text-gray-700">
-            Nossa missão é simplificar o marketing para que você possa focar nos resultados. A BizEase oferece soluções diretas, sem complicações.
-          </p>
-        </section>
-
-        <button className="px-6 py-3 mt-4 bg-primaryOrange text-white font-semibold rounded-full hover:bg-opacity-90">
-          Vamos Conversar
-        </button>
-
-        <div className="flex flex-col items-center mt-10 space-y-4">
-          <div className="bg-primaryBlue text-white p-4 rounded-md w-full max-w-sm text-center">
-            <h3 className="text-lg font-semibold">Marketing sem Complicação</h3>
-            <p className="text-sm mt-2">Cresça com estratégias simples e eficazes.</p>
-          </div>
-          <div className="bg-accentMint text-white p-4 rounded-md w-full max-w-sm text-center">
-            <h3 className="text-lg font-semibold">Resultados Comprovados</h3>
-            <p className="text-sm mt-2">Aumente seu impacto com nosso método.</p>
-          </div>
-        </div>
-      </main>
-
-      <footer className="w-full bg-primaryBlue text-white py-4 mt-10 text-center">
-        <p>&copy; {new Date().getFullYear()} BizEase - Todos os direitos reservados.</p>
-      </footer>
-    </div>
-  );
-} */
-
+import DarkModeToggle from "./DarkModeToggle";
 import AcmeLogo from "@/app/ui/acme-logo";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { UserIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col p-6">
-      <header className="flex items-center justify-between p-4 bg-blue-500">
+    <main className="flex min-h-screen flex-col bg-cover bg-center text-gray-900 dark:text-white dark:bg-gray-900 transition-all duration-150 ease-in-out">
+      {/* Header Section */}
+      <header className="flex items-center justify-between p-4 bg-opacity-90 bg-gray-50 dark:bg-gray-900 transition-colors duration-150 ease-in-out">
         <div className="flex items-center gap-2">
           <AcmeLogo />
         </div>
-        <nav className="flex gap-8 text-gray-50">
-          <a href="#services" className="hover:text-gray-200 transition-colors">
+
+        {/* Navigation Links */}
+        <nav className="flex-col md:flex-row md:flex items-center gap-8 text-sm font-semibold tracking-tight transition-all duration-150 ease-in-out">
+          <a href="#services" className="hover:text-blue-500 transition-all duration-150 ease-in-out">
             Serviços
           </a>
-          <a href="#about" className="hover:text-gray-200 transition-colors">
+          <a href="#about" className="hover:text-blue-500 transition-all duration-150 ease-in-out">
             Quem Somos
           </a>
-          <a href="#contact" className="hover:text-gray-200 transition-colors">
+          <a href="#contact" className="hover:text-blue-500 transition-all duration-150 ease-in-out">
             Contato
+          </a>
+          <DarkModeToggle />
+          <a href="#login" className="flex items-center gap-1 hover:text-blue-500 transition-all duration-150 ease-in-out" aria-label="Login">
+            <UserIcon className="h-5 w-5" />
           </a>
         </nav>
       </header>
-      <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
-        <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-0 px-6 py-10 md:w-2/5 md:px-20">
-          <p
-            className="text-xl text-gray-800 md:text-3xl md:leading-normal"
-          >
+
+      {/* Hero Section */}
+      <section className="flex min-h-screen flex-col items-center justify-center px-6 py-12 text-center md:px-12 transition-all duration-150 ease-in-out">
+        <h1 className="text-3xl font-black md:text-5xl md:w-3/4 transition-all duration-150 ease-in-out">
+          Rapidly build modern websites without ever leaving your HTML.
+        </h1>
+        <p className="mt-4 text-lg font-light md:text-xl md:w-3/4 transition-all duration-150 ease-in-out">
+          A utility-first CSS framework packed with classes like{" "}
+          <code className="font-mono text-blue-500">flex</code>,{" "}
+          <code className="font-mono text-blue-500">pt-4</code>, and{" "}
+          <code className="font-mono text-blue-500">rotate-90</code>.
+        </p>
+
+        <div className="mt-8 flex flex-col items-center gap-4 md:flex-row">
+          <Link href="/login" className="flex items-center justify-center self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white hover:bg-blue-400 transition-all duration-150 ease-in-out md:text-base">
+            <span>Get Started</span>
+          </Link>
+          <Link href="/login" className="rounded-lg border border-blue-500 px-6 py-3 text-blue-500 font-semibold hover:bg-blue-50 dark:hover:bg-gray-800 transition-all duration-150 ease-in-out">
+            Learn More
+          </Link>
+        </div>
+      </section>
+
+      {/* Secondary Content Section */}
+      <section className="flex grow flex-col gap-4 md:flex-row transition-all duration-150 ease-in-out">
+        <div className="flex flex-col justify-center gap-6 rounded-lg px-6 py-10 md:w-2/5 md:px-20">
+          <p className="text-xl md:text-3xl md:leading-normal transition-all duration-150 ease-in-out">
             <strong>Marketing sem Complicação.</strong> Calcule o investimento necessário para conseguir novos clientes.
           </p>
-          <Link
-            href="/login"
-            className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
-          >
-            <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
+          <Link href="/login" className="flex items-center justify-center self-start rounded-lg bg-blue-500 px-10 py-3 text-sm font-medium text-white hover:bg-blue-400 transition-all duration-150 ease-in-out md:text-base">
+            <span>Login</span>
           </Link>
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-          {/* Add Hero Images Here */}
-          <Image
-            src="/hero-desktop.png"
-            width={1000}
-            height={760}
-            className="hidden md:block"
-            alt="Screenshots of the dashboard project showing desktop version"
-          />
-          <Image
-            src="/hero-mobile.png"
-            width={560}
-            height={620}
-            className="block md:hidden"
-            alt="Screenshot of the dashboard project showing mobile version"
-          />
+          <Image src="/hero-desktop.png" width={1000} height={760} className="hidden md:block" alt="Screenshots of the dashboard project showing desktop version" />
+          <Image src="/hero-mobile.png" width={560} height={620} className="block md:hidden" alt="Screenshot of the dashboard project showing mobile version" />
         </div>
-      </div>
+      </section>
     </main>
   );
 }

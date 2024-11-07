@@ -1,34 +1,34 @@
 import type { Config } from 'tailwindcss';
+import forms from '@tailwindcss/forms';
 
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './public/**/*.{html,js,svg}', // Incluindo arquivos SVG no conteúdo
   ],
   theme: {
     extend: {
       colors: {
         blue: {
+          100: '#EBF8FF', // Cor mais clara
           400: '#2589FE',
           500: '#0070F3',
           600: '#2F6FEB',
+          700: '#0061C1', // Cor mais escura
         },
-        primaryBlue: "#0070F3",   // Azul Claro
-        accentMint: "#1DE9B6",    // Verde Menta
-        lightGray: "#F5F5F5",     // Cinza Claro
-        primaryOrange: "#FFB300", // Laranja
-        textDark: "#333333",      // Cinza Escuro para textos
+        lightBlue: {
+          DEFAULT: '#F0FBFF', // Azul claro
+        },
       },
-    },
-    keyframes: {
-      shimmer: {
-        '100%': {
-          transform: 'translateX(100%)',
-        },
+      backgroundImage: {
+        'diagonal-stripes': "url('/teste.svg')",
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  darkMode: 'class', // Habilita o controle do modo escuro via classe
+  plugins: [forms],
 };
+
 export default config;
