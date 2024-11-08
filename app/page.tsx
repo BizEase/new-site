@@ -19,7 +19,7 @@ export default function Page() {
             Serviços
           </a>
           <a href="#about" className="hover:text-blue-500 transition-all duration-150 ease-in-out">
-            Quem Somosssss
+            Quem Somos
           </a>
           <a href="#contact" className="hover:text-blue-500 transition-all duration-150 ease-in-out">
             Contato
