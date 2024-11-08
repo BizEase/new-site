@@ -4,8 +4,8 @@ import Image from "next/image";
 import NavBar from "./components/NavBar";
 
 export default function Page() {
-  return (
-    <main className="flex min-h-screen flex-col bg-diagonal-stripes bg-cover bg-center text-blue-900 dark:text-white dark:bg-blue-900">
+  return ( //  bg-diagonal-stripes bg-cover bg-center
+    <main className="flex min-h-screen flex-col bg-white dark:bg-blue-900 text-blue-900 dark:text-white">
       {" "}
       {/* Header Section */}
       <header className="flex items-center justify-between p-4">

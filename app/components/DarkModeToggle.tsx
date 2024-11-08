@@ -6,12 +6,22 @@ import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 export default function DarkModeToggle() {
   const [darkMode, setDarkMode] = useState(false);
 
-  // Adiciona ou remove a classe 'dark' ao <html> com base no estado de darkMode
+  useEffect(() => {
+    // Checa se estamos no ambiente cliente e acessa o tema salvo
+    const savedTheme = typeof window !== "undefined" ? localStorage.getItem("theme") : null;
+    if (savedTheme === "dark") {
+      setDarkMode(true);
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
   }, [darkMode]);
 

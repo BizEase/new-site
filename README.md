@@ -3,7 +3,6 @@
 Pendências:
 
 - imagem de fundo com modo escuro
-- menu hamburguer para mobile (ver exemplo site tailwind)
 
 Fontes livres (Google Fonts):
 
