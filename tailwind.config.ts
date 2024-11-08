@@ -6,20 +6,18 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './public/**/*.{html,js,svg}', // Incluindo arquivos SVG no conteúdo
+    './public/**/*.{html,js,svg}',
   ],
   theme: {
     extend: {
       colors: {
         blue: {
-          100: '#EBF8FF', // Cor mais clara
+          100: '#EBF8FF',
           400: '#2589FE',
           500: '#0070F3',
           600: '#2F6FEB',
-          700: '#0061C1', // Cor mais escura
-        },
-        lightBlue: {
-          DEFAULT: '#F0FBFF', // Azul claro
+          700: '#0061C1',
+          900: '#001633', 
         },
       },
       backgroundImage: {
@@ -27,7 +25,7 @@ const config: Config = {
       },
     },
   },
-  darkMode: 'class', // Habilita o controle do modo escuro via classe
+  darkMode: 'class',
   plugins: [forms],
 };
 

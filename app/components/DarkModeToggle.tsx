@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react";
-import { SunIcon } from "@heroicons/react/24/outline";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 
 export default function DarkModeToggle() {
   const [darkMode, setDarkMode] = useState(false);
@@ -19,9 +19,13 @@ export default function DarkModeToggle() {
     <button
       title="Toggle dark mode"
       onClick={() => setDarkMode(!darkMode)}
-      className="flex items-center gap-1 hover:text-blue-500 transition-colors"
+      className="flex items-center gap-1 hover:text-blue-500"
     >
-      <SunIcon className="h-5 w-5" />
+      {darkMode ? (
+        <SunIcon className="h-5 w-5" />
+      ) : (
+        <MoonIcon className="h-5 w-5" />
+      )}
     </button>
   );
 }
