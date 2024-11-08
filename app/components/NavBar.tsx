@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
   const toggleMenu = (): void => setIsOpen(!isOpen);
 
   return (
-    <nav className="text-sm bg-white dark:bg-blue-900 text-blue-900 dark:text-white">
+    <nav className="text-sm font-bold text-blue-900 dark:text-white">
       <div className="flex items-center justify-between px-4 py-3 md:py-4">
         <button
           className="md:hidden focus:outline-none"
@@ -39,7 +39,7 @@ const NavBar: React.FC = () => {
 
         {/* Links de Navegação para Desktop */}
         <div className="hidden md:flex space-x-8 items-center">
-          <Link href="#services" className="hover:text-blue-500">
+          <Link href="/servicos" className="hover:text-blue-500">
             Serviços
           </Link>
           <Link href="#about" className="hover:text-blue-500">
@@ -63,7 +63,7 @@ const NavBar: React.FC = () => {
       >
         <div className="flex flex-col items-start px-4 py-2 space-y-2">
           <Link
-            href="#services"
+            href="/servicos"
             className="block w-full py-2 hover:text-blue-500"
           >
             Serviços

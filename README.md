@@ -1,8 +1,24 @@
 #
 
-Pendências:
+Base construída:
 
-- imagem de fundo com modo escuro
+- Layout das páginas
+- Páginas com seções
+- Componentes Logo, NavBar e DarkMode
+- Importação de fontes
+- Compatível desktop e mobile
+- imagem background funciona com algum problema nas páginas internas
+- Páginas e componentes renderizados no servidor exceto NavBar e DarkMode
+
+cd new-site
+pnpm i
+pnpm dev
+
+Baixar clone:
+
+- git clone https://github.com/BizEase/new-site new-site
+- instalar dependências: pnpm i
+- executar: pnpm dev
 
 Fontes livres (Google Fonts):
 
@@ -10,13 +26,4 @@ Fontes livres (Google Fonts):
 - Montserrat: Uma fonte sans-serif moderna que tem uma estética semelhante a Circular Std.
 - Poppins: Outra fonte sans-serif com formas arredondadas, semelhante à Circular Std.
 - Nunito: Uma fonte com um estilo amigável e legível.
-
-cd nextjs-dashboard
-pnpm i
-pnpm dev
-
-Baixar clone:
-
-- git clone <https://github.com/BizEase/nextjs-dashboard> new-site
-- instalar dependências: pnpm i
-- executar: pnpm dev
+  
