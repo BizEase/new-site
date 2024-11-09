@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { nunito } from "../config/fonts";
 
 export default function Page() {
