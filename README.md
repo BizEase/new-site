@@ -7,7 +7,7 @@ Base construída:
 - Componentes Logo, NavBar e DarkMode
 - Importação de fontes
 - Compatível desktop e mobile
-- imagem background funciona com algum problema nas páginas internas
+- Imagem background: usar a criatividade
 - Páginas e componentes renderizados no servidor exceto NavBar e DarkMode
 
 cd new-site

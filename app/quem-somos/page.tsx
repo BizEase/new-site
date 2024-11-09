@@ -1,13 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 import { nunito } from "../config/fonts";
 
 export default function Page() {
   return (
     <section className="flex flex-col items-center justify-center px-6 py-16 text-center md:px-16 md:py-32">
-      <h1 className="text-3xl font-black md:text-5xl md:w-3/4">
-        Página de Serviços
-      </h1>
+      <h1 className="text-3xl font-black md:text-5xl md:w-3/4">Quem Somos</h1>
       <p className={`${nunito.className} py-12 text-l md:text-xl md:w-3/4`}>
         A utility-first CSS framework packed with classes like{" "}
         <code className="font-mono text-blue-400">flex</code>,{" "}
@@ -37,16 +34,6 @@ export default function Page() {
             <strong>Marketing sem Complicação.</strong> Calcule o investimento
             necessário para conseguir novos clientes.
           </p>
-
-        </div>
-      </section>
-      <section className="flex flex-col md:flex-row gap-4 mt-16 items-center justify-center">
-        <div className="flex flex-col justify-center gap-6 rounded-lg px-6 py-10 md:w-2/5 md:px-20">
-          <p className="text-xl md:text-3xl md:leading-normal">
-            <strong>Marketing sem Complicação.</strong> Calcule o investimento
-            necessário para conseguir novos clientes.
-          </p>
-
         </div>
       </section>
     </section>

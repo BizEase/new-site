@@ -42,7 +42,8 @@ const NavBar: React.FC = () => {
           <Link href="/servicos" className="hover:text-blue-500">
             Serviços
           </Link>
-          <Link href="#about" className="hover:text-blue-500">
+          {/* Alterei de #about para /quem-somos */}
+          <Link href="/quem-somos" className="hover:text-blue-500">
             Quem Somos
           </Link>
           <Link href="#contact" className="hover:text-blue-500">
@@ -68,7 +69,8 @@ const NavBar: React.FC = () => {
           >
             Serviços
           </Link>
-          <Link href="#about" className="block w-full py-2 hover:text-blue-500">
+          {/* Alterei de #about para /quem-somos */}
+          <Link href="/quem-somos" className="block w-full py-2 hover:text-blue-500">
             Quem Somos
           </Link>
           <Link

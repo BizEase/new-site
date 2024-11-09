@@ -11,15 +11,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        <main className="flex min-h-screen flex-col bg-light dark:bg-dark bg-cover bg-center bg-no-repeat text-blue-900 dark:text-white">
-          <header className="flex items-center justify-between p-4">
-            <div className="flex items-center gap-2">
-              <Logo />
+        <main className="relative min-h-screen bg-light dark:bg-dark text-blue-900 dark:text-white">
+          {/* Conteúdo principal */}
+          <div className="relative z-10">
+            <header className="flex items-center justify-between p-4">
+              <div className="flex items-center gap-2">
+                <Logo />
+              </div>
+              <NavBar />
+            </header>
+            <div className="flex-grow flex items-center justify-center px-6 py-16 md:px-8 md:py-8">
+              {children}
             </div>
-            <NavBar />
-          </header>
-          <div className="flex-grow flex items-center justify-center">
-            {children}
           </div>
         </main>
       </body>
